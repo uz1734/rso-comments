@@ -14,8 +14,7 @@ cache:
   - $HOME/.m2
 
 env:
-  - TIMESTAMP=$(date '+%Y%m%d%H%M%S')
-  - DOCKER_IMAGE=jmezna/rso-comments:1.0.0-SNAPSHOT-"${TIMESTAMP}"
+  - DOCKER_IMAGE=jmezna/rso-comments:1.0.0-SNAPSHOT-$TRAVIS_JOB_NUMBER
 
 script:
   - mvn clean package -U
